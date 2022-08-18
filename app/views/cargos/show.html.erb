@@ -1,0 +1,46 @@
+<h1>INFORMATION ABOUT <%= @cargo.id %> ORDER</h1>
+<h2>
+  <div>
+    <%= @cargo.name %>
+  </div>
+  <div>
+    <%= @cargo.surname %>
+  </div>
+  <div>
+    <%= @cargo.middle_name%>
+  </div>
+  <div>
+    <%= @cargo.phone %>
+  </div>
+  <div>
+    <%= @cargo.email %>
+  </div>
+  <div>
+    <%= @cargo.weight %>
+  </div>
+  <div>
+    <%= @cargo.length %>
+  </div>
+  <div>
+    <%= @cargo.width %>
+  </div>
+  <div>
+    <%= @cargo.height %>
+  </div>
+  <div>
+    <%= @cargo.origins %>
+  </div>
+  <div>
+    <%= @cargo.destinations %> 
+  </div>
+  <div>
+    <%= @cargo.distance %>
+  </div>
+  <div>
+    <%= @cargo.price %> "RUB"
+  </div>
+</h2>
+
+<h2>
+  <%= link_to "See previous applications", cargos_path%>
+</h2>
