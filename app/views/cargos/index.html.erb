@@ -1,0 +1,14 @@
+<h1>ORDERS</h1>
+<% @cargos.each do |cargo|%>
+  <div>
+    <h2>
+      <%= link_to "Order № #{cargo.id} #{cargo.origins} - #{cargo.destinations}", cargo %>
+    </h2>
+  </div>
+<%end%>
+
+<div>
+  <h2>
+    <%= link_to "CREATE ORDER", new_cargo_path %>
+  </h2>
+</div>
