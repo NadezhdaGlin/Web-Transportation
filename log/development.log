@@ -10240,3 +10240,15 @@ Completed 200 OK in 148ms (Views: 127.9ms | ActiveRecord: 8.9ms | Allocations: 1
 
 =======
 >>>>>>> 44d9baead2c8b205485bdbf51501a698cdfe4e32
+Started GET "/" for 127.0.0.1 at 2022-08-29 14:31:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CargosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cargos/index.html.erb within layouts/application
+  [1m[36mCargo Load (0.5ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+  ↳ app/views/cargos/index.html.erb:2
+  Rendered cargos/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 10983)
+  Rendered layout layouts/application.html.erb (Duration: 125.3ms | Allocations: 142031)
+Completed 200 OK in 136ms (Views: 124.8ms | ActiveRecord: 3.4ms | Allocations: 148876)
+
+
