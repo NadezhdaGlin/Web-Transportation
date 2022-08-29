@@ -10225,6 +10225,7 @@ Completed 200 OK in 2045ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 1
 
 
   [1m[36mCargo Load (0.5ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2022-08-29 13:58:27 +0300
   [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by CargosController#index as HTML
@@ -10237,3 +10238,5 @@ Processing by CargosController#index as HTML
 Completed 200 OK in 148ms (Views: 127.9ms | ActiveRecord: 8.9ms | Allocations: 148743)
 
 
+=======
+>>>>>>> 44d9baead2c8b205485bdbf51501a698cdfe4e32
