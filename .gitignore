@@ -32,3 +32,6 @@
 
 #Ignore mapbox key
 /.env
+
+#Ignore cache
+/tmp/cache/*
