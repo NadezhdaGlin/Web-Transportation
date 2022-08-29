@@ -67,7 +67,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0.rc1'
   gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-  gem 'dotenv-rails', groups: %i[development test]
+  gem 'dotenv-rails'
 end
 
 group :development do
