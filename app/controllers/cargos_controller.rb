@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class CargosController < ApplicationController
+  before_action :authenticate_user!
   def index
     @cargos = Cargo.all
   end
@@ -30,6 +31,6 @@ class CargosController < ApplicationController
     params.require(:cargo).permit(:name, :surname, :middle_name, :phone, :email, :weight, :length, :width,
                                   :height,
                                   :origins,
-                                  :destinations)
+                                  :destinations).merge(user: current_user)
   end
 end

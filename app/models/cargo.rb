@@ -13,5 +13,6 @@ class Cargo < ApplicationRecord
             :origins,
             :destinations,
             presence: true
-  validates :phone, format: {with: /(^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$)/}
+  validates :phone, format: { with: /(^\+?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$)/ }
+  belongs_to :user
 end
