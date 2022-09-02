@@ -1,4 +1,11 @@
+<% if user_signed_in?%>
+  <div>
+    <%= button_to "SIGN OUT", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+  </div>
+<%end%>
+
 <h1>ORDERS</h1>
+
 <% @cargos.each do |cargo|%>
   <div>
     <h2>
@@ -7,8 +14,10 @@
   </div>
 <%end%>
 
-<div>
-  <h2>
-    <%= link_to "CREATE ORDER", new_cargo_path %>
-  </h2>
-</div>
+<%if current_user.present?%>
+  <div>
+    <h4>
+      <%= link_to "CREATE ORDER", new_cargo_path %>
+    </h4>
+  </div>
+<%end%>

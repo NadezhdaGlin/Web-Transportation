@@ -20,11 +20,11 @@ RSpec.describe Package::Builder do
 
     context 'when data is not entered' do
       let(:params) do
-        { weight: 32.4, length:"", width: 12, height: 3, origins: 'Krasnodar', destinations: 'Moscow' }
+        { weight: 32.4, length: '', width: 12, height: 3, origins: 'Krasnodar', destinations: 'Moscow' }
       end
       it 'return raise error' do
         VCR.use_cassette('empty_value_Krasnodar_Moscow') do
-          expect{information}.to raise_error('Space is not a value')
+          expect { information }.to raise_error('Space is not a value')
         end
       end
     end

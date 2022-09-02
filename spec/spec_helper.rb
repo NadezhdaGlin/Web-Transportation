@@ -16,7 +16,6 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'vcr'
-
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/vcr'
   config.hook_into :webmock
@@ -29,6 +28,8 @@ require 'factory_bot_rails'
 # require 'database_cleaner/active_record'
 
 RSpec.configure do |config|
+  FactoryBot.reload
+  
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -118,5 +119,5 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  config.include FactoryBot::Syntax::Methods
+  Dir['./spec/support/**/*.rb'].sort.each { |f| require f }
 end
