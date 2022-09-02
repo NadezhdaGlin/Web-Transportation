@@ -17,7 +17,7 @@ module Package
       raise 'Origins or Destinations is empty' if origins == '' || destinations == ''
       raise "You can't enter two identical values" if origins == destinations
 
-      uri = URI("https://api.mapbox.com/geocoding/v5/mapbox.places/#{origins}%2C#{destinations}.json?country=ru&limit=2&proximity=ip&types=place&access_token=#{ENV['TOKEN_MAPBOX']}")
+      uri = URI("https://api.mapbox.com/geocoding/v5/mapbox.places/#{(origins.strip).sub(/[" "]/, '%20')}%2C#{(destinations.strip).sub(/[" "]/, '%20')}.json?country=ru&limit=2&proximity=ip&types=place&access_token=#{ENV['TOKEN_MAPBOX']}")
       res = Net::HTTP.get_response(uri)
       res.body if res.is_a?(Net::HTTPSuccess)
     end
