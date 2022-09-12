@@ -42,5 +42,10 @@
 </h2>
 
 <h2>
+  <%= link_to "Update cargo", edit_cargo_path %>
+  <%= button_to "Delete cargo", cargo_path(@cargo), method: :delete %>
+</h2>
+
+<h2>
   <%= link_to "See previous applications", cargos_path%>
 </h2>

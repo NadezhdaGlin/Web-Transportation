@@ -9,6 +9,8 @@ ruby '3.0.3'
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 gem 'vcr'
 gem 'kaminari'
+gem 'aasm'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sassc-rails'
 gem 'sprockets-rails'
@@ -17,6 +19,7 @@ gem 'rubocop', require: false
 gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
 gem 'simplecov', require: false, group: :test
+gem 'active_interaction', '~> 5.1'
 
 gem 'activeadmin'
 gem 'devise'
