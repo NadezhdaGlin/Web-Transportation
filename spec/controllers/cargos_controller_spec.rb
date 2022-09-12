@@ -32,7 +32,7 @@ RSpec.describe CargosController, type: :controller do
       end
 
       context 'when paginate' do
-        subject(:index_paginate) {get :index, params: { page: '2' }}
+        subject(:index_paginate) { get :index, params: { page: '2' } }
         let!(:cargo_list) { create_list :cargo, 5, user_id: user.id }
         it 'return paginated cargos' do
           index_paginate
