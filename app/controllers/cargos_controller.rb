@@ -19,22 +19,31 @@ class CargosController < ApplicationController
   end
 
   def create
-    extended_params = Package::Builder.cargo_information(cargo_params)
-    @cargo = current_user.cargos.new(extended_params)
-
-    if @cargo.save
-      redirect_to @cargo
+    outcome = Cargos::CreateCargo.run(params[:cargo].merge(user: current_user))
+    if outcome.valid?
+      redirect_to(outcome.result)
     else
-      render :new
+      redirect_to new_cargo_path
     end
   end
 
-  private
+  def edit
+    @cargo = Cargo.find(params[:id])
+  end
 
-  def cargo_params
-    params.require(:cargo).permit(:name, :surname, :middle_name, :phone, :email, :weight, :length, :width,
-                                  :height,
-                                  :origins,
-                                  :destinations)
+  def update
+    cargo = Cargo.find(params[:id])
+    outcome = Cargos::UpdateCargo.run(params[:cargo].merge(user: current_user, cargo: cargo))
+    if outcome.valid?
+      redirect_to(outcome.result)
+    else
+      redirect_to edit_cargo_path
+    end
+  end
+
+  def destroy
+    cargo = Cargo.find(params[:id])
+    Cargos::DestroyCargo.run(cargo: cargo) if current_user == cargo.user
+    redirect_to(cargos_path)
   end
 end

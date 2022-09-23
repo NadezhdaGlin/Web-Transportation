@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.mapbox.com/geocoding/v5/mapbox.places/Anapa,Moscow.json?access_token=pk.eyJ1IjoibmFkZXpoZGFnbGluIiwiYSI6ImNsNnl2cWFpczB0azIzaXFtbXJmazBuYmYifQ._q-6U3cvG2I5ZuKekel2KA&country=ru&limit=2&proximity=ip&types=place
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.mapbox.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/vnd.geo+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 22 Sep 2022 14:51:57 GMT
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - x-rate-limit-interval,x-rate-limit-limit,x-rate-limit-remaining,x-rate-limit-reset
+      Cache-Control:
+      - max-age=604800
+      X-Rate-Limit-Limit:
+      - '600'
+      X-Rate-Limit-Interval:
+      - '60'
+      X-Rate-Limit-Reset:
+      - '1663858377'
+      Last-Modified:
+      - Wed, 21 Sep 2022 11:06:08 GMT
+      Etag:
+      - '"91bb2dfbcaad8fda0d6ae5522b3928c5"'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 a9827211f5accfa203d9dee17dcafb30.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - HEL51-P2
+      X-Amz-Cf-Id:
+      - ICyK1-e-Z4voAyPzGFQJs1IhheeZk1Opqee0j0mP4SXfAn51ZVgJow==
+      Age:
+      - '1285'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0eXBlIjoiRmVhdHVyZUNvbGxlY3Rpb24iLCJxdWVyeSI6WyJhbmFwYSIsIm1vc2NvdyJdLCJmZWF0dXJlcyI6W3siaWQiOiJwbGFjZS40MDQwODk4IiwidHlwZSI6IkZlYXR1cmUiLCJwbGFjZV90eXBlIjpbInBsYWNlIl0sInJlbGV2YW5jZSI6MC41LCJwcm9wZXJ0aWVzIjp7Indpa2lkYXRhIjoiUTE1NzU4In0sInRleHQiOiLQkNC90LDQv9CwIiwicGxhY2VfbmFtZSI6ItCQ0L3QsNC/0LAsIEtyYXNub2RhciBLcmFpLCBSdXNzaWEiLCJtYXRjaGluZ190ZXh0IjoiQW5hcGEiLCJtYXRjaGluZ19wbGFjZV9uYW1lIjoiQW5hcGEsIEtyYXNub2RhciBLcmFpLCBSdXNzaWEiLCJiYm94IjpbMzYuODkwMzY3MjMxLDQ0LjcwMzc4MzQwNiwzNy42NTI2NjUyNjUsNDUuMTk4Mjk5MDg5XSwiY2VudGVyIjpbMzcuMzE2NjcsNDQuODk0NDRdLCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6WzM3LjMxNjY3LDQ0Ljg5NDQ0XX0sImNvbnRleHQiOlt7ImlkIjoicmVnaW9uLjEyNDk5NTAwMjMyNDQ5MjYwIiwic2hvcnRfY29kZSI6IlJVLUtEQSIsIndpa2lkYXRhIjoiUTM2ODAiLCJ0ZXh0IjoiS3Jhc25vZGFyIEtyYWkifSx7ImlkIjoiY291bnRyeS4zNjA5NTUyOTQyMjUyMCIsIndpa2lkYXRhIjoiUTE1OSIsInNob3J0X2NvZGUiOiJydSIsInRleHQiOiJSdXNzaWEifV19LHsiaWQiOiJwbGFjZS4xMDA4OTkwMDAyNjI0OTc0MCIsInR5cGUiOiJGZWF0dXJlIiwicGxhY2VfdHlwZSI6WyJyZWdpb24iLCJwbGFjZSJdLCJyZWxldmFuY2UiOjAuNSwicHJvcGVydGllcyI6eyJzaG9ydF9jb2RlIjoiUlUtTU9XIiwid2lraWRhdGEiOiJRNjQ5In0sInRleHQiOiJNb3Njb3ciLCJwbGFjZV9uYW1lIjoiTW9zY293LCBSdXNzaWEiLCJiYm94IjpbMzYuODAzMTY5OTA1LDU1LjE0MjEyNTksMzcuOTY3MzQ1MDUzLDU2LjAyMTQ3OTFdLCJjZW50ZXIiOlszNy42MTc3OCw1NS43NTU4M10sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbMzcuNjE3NzgsNTUuNzU1ODNdfSwiY29udGV4dCI6W3siaWQiOiJjb3VudHJ5LjM2MDk1NTI5NDIyNTIwIiwid2lraWRhdGEiOiJRMTU5Iiwic2hvcnRfY29kZSI6InJ1IiwidGV4dCI6IlJ1c3NpYSJ9XX1dLCJhdHRyaWJ1dGlvbiI6Ik5PVElDRTogwqkgMjAyMiBNYXBib3ggYW5kIGl0cyBzdXBwbGllcnMuIEFsbCByaWdodHMgcmVzZXJ2ZWQuIFVzZSBvZiB0aGlzIGRhdGEgaXMgc3ViamVjdCB0byB0aGUgTWFwYm94IFRlcm1zIG9mIFNlcnZpY2UgKGh0dHBzOi8vd3d3Lm1hcGJveC5jb20vYWJvdXQvbWFwcy8pLiBUaGlzIHJlc3BvbnNlIGFuZCB0aGUgaW5mb3JtYXRpb24gaXQgY29udGFpbnMgbWF5IG5vdCBiZSByZXRhaW5lZC4gUE9JKHMpIHByb3ZpZGVkIGJ5IEZvdXJzcXVhcmUuIn0=
+  recorded_at: Thu, 22 Sep 2022 15:13:23 GMT
+- request:
+    method: get
+    uri: https://api.mapbox.com/directions/v5/mapbox/driving/37.31667,44.89444;37.61778,55.75583?access_token=pk.eyJ1IjoibmFkZXpoZGFnbGluIiwiYSI6ImNsNnl2cWFpczB0azIzaXFtbXJmazBuYmYifQ._q-6U3cvG2I5ZuKekel2KA&alternatives=true&geometries=geojson&overview=simplified&steps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.mapbox.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 22 Sep 2022 14:51:58 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Mapbox-Request-Id:
+      - RgGkdru1qguptNZJsoUi4s9sj1s0UOJ9qjOoEW8uDIbiMQgNiQc-CA==
+      Cache-Control:
+      - max-age=3600
+      X-Mapbox-Routing-Engine:
+      - v2.0
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 9e492fcc6274a89562b4ce52fd372508.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - HEL51-P2
+      X-Amz-Cf-Id:
+      - ajoAhFu3-DYet8u6eZ9042Rou9-RI_IvjZ0ojmRY2R4o5eC0iJ01Tg==
+      Age:
+      - '1285'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZXMiOlt7ImNvdW50cnlfY3Jvc3NlZCI6ZmFsc2UsIndlaWdodF9uYW1lIjoiYXV0byIsIndlaWdodCI6NTk4MjAuMjE5LCJkdXJhdGlvbiI6NjQ2OTguODU5LCJkaXN0YW5jZSI6MTUyODQ3MS43NSwibGVncyI6W3sidmlhX3dheXBvaW50cyI6W10sImFkbWlucyI6W3siaXNvXzMxNjZfMV9hbHBoYTMiOiJSVVMiLCJpc29fMzE2Nl8xIjoiUlUifSx7Imlzb18zMTY2XzFfYWxwaGEzIjoiUlVTIiwiaXNvXzMxNjZfMSI6IlJVIn0seyJpc29fMzE2Nl8xX2FscGhhMyI6IlJVUyIsImlzb18zMTY2XzEiOiJSVSJ9LHsiaXNvXzMxNjZfMV9hbHBoYTMiOiJSVVMiLCJpc29fMzE2Nl8xIjoiUlUifSx7Imlzb18zMTY2XzFfYWxwaGEzIjoiUlVTIiwiaXNvXzMxNjZfMSI6IlJVIn0seyJpc29fMzE2Nl8xX2FscGhhMyI6IlJVUyIsImlzb18zMTY2XzEiOiJSVSJ9LHsiaXNvXzMxNjZfMV9hbHBoYTMiOiJSVVMiLCJpc29fMzE2Nl8xIjoiUlUifSx7Imlzb18zMTY2XzFfYWxwaGEzIjoiUlVTIiwiaXNvXzMxNjZfMSI6IlJVIn1dLCJ3ZWlnaHQiOjU5ODIwLjIxOSwiZHVyYXRpb24iOjY0Njk4Ljg1OSwic3RlcHMiOltdLCJkaXN0YW5jZSI6MTUyODQ3MS43NSwic3VtbWFyeSI6ItCQLTE0Niwg0JwtNCJ9XSwiZ2VvbWV0cnkiOnsiY29vcmRpbmF0ZXMiOltbMzcuMzE2OTk5LDQ0Ljg5NDExMl0sWzM3LjMyOTYwOCw0NC44OTk3ODZdLFszNy4zMjY4OCw0NC45MDMwMDFdLFszNy4zMzMxMiw0NC45MDUyOTZdLFszNy4zMjU4NzUsNDQuOTI1MTQ5XSxbMzcuMzM5NzczLDQ0LjkyODc0Nl0sWzM3LjQwNTk2MSw0NC45MTI0NzFdLFszNy42NDkyOTYsNDQuODI5MDg4XSxbMzcuNjQ5NjUzLDQ0LjgyODU1NF0sWzM4LjkzMDg1OCw0NC45NTc3OV0sWzM4Ljk5NjU1Niw0NC45NTIwMzldLFszOS4xMjAwNjIsNDQuOTQ4OTM1XSxbMzkuMTEwNzE0LDQ1LjE3OTE3XSxbMzkuODY3NTAzLDQ2LjEyMzcyM10sWzM5LjY2MTAyMyw0Ni43NTgwMTZdLFszOS43Njg1NTIsNDcuMDc5MDc1XSxbMzkuODQ5OTgsNDcuMjgyNDE5XSxbMzkuODQ5NTk1LDQ3LjI4MzIzOV0sWzM5Ljg0OTM4NSw0Ny4yODc0MTddLFszOS45Njc4NTEsNDcuNTY2NDQ1XSxbNDAuMTAwMTU4LDQ3LjcxMDE5XSxbNDAuMjY1ODc4LDQ4LjE4NjMwM10sWzQwLjU2MzQyMyw0OS41NzczMDVdLFs0MC41MDM0NTEsNDkuOTU0Mjg4XSxbNDAuNDM0NTQ2LDUwLjEzNjMzXSxbNDAuNDI5OTMzLDUwLjE0NjYxOV0sWzM5LjgyNjMxNiw1MS4wNzEzN10sWzM5Ljc0Mjc4NSw1MS4xMDk2XSxbMzkuNjE2MDY4LDUxLjMwNzI3NF0sWzM5LjU1NDY2LDUxLjQ2NzkxXSxbMzkuMzAzMzQ3LDUxLjY1MzY4Nl0sWzM5LjAyMDQzNSw1Mi4zMjhdLFszOC42NDA2OTcsNTIuNjUxNTAzXSxbMzguNTg5MjAyLDUyLjY2MTIwOF0sWzM4LjE2OTA4OSw1My4wODYwNjZdLFszOC4xNzkzMyw1My4zMTMwMzRdLFszOC4wNzM5NzMsNTQuMTQ2M10sWzM4LjE1OTk0MSw1NC42Mzc0NDRdLFszNy45NzY3MDMsNTQuOTY1MTU5XSxbMzcuNjkyMjcxLDU1LjU3MTY0MV0sWzM3LjY4Nzc0NSw1NS41NzYyNDNdLFszNy42NTcyLDU1LjYyNzk2M10sWzM3LjY2MjM3OSw1NS42Mjg4MzRdLFszNy42NTQyMDksNTUuNjUyODU5XSxbMzcuNjIyMTU1LDU1LjcxMTAwNl0sWzM3LjYxNDc2MSw1NS43Mjc1NjJdLFszNy42MTA4ODMsNTUuNzI3NTk5XSxbMzcuNjEwOTgyLDU1Ljc0ODUzOF0sWzM3LjYwOTIwNiw1NS43NDk2MTRdLFszNy42MTQ0MTYsNTUuNzU2NTM0XSxbMzcuNjIwMDcsNTUuNzU4ODUyXSxbMzcuNjIwNjIsNTUuNzU3NzYzXSxbMzcuNjE5MTI4LDU1Ljc1NzQ5Nl0sWzM3LjYxNyw1NS43NTYzODRdXSwidHlwZSI6IkxpbmVTdHJpbmcifX1dLCJ3YXlwb2ludHMiOlt7ImRpc3RhbmNlIjo0NC44LCJuYW1lIjoi0JrRgNGL0LzRgdC60LDRjyDRg9C70LjRhtCwIiwibG9jYXRpb24iOlszNy4zMTY5OTksNDQuODk0MTEyXX0seyJkaXN0YW5jZSI6NzguNjgxLCJuYW1lIjoiIiwibG9jYXRpb24iOlszNy42MTcsNTUuNzU2Mzg0XX1dLCJjb2RlIjoiT2siLCJ1dWlkIjoiUmdHa2RydTFxZ3VwdE5aSnNvVWk0czlzajFzMFVPSjlxak9vRVc4dURJYmlNUWdOaVFjLUNBPT0ifQ==
+  recorded_at: Thu, 22 Sep 2022 15:13:23 GMT
+recorded_with: VCR 6.1.0
