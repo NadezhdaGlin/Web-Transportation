@@ -16,5 +16,16 @@ FactoryBot.define do
     distance { 1351.0 }
     price { 1351 }
     user_id { (create :user).id }
+
+    trait :delivering do
+      status { 'delivering' }
+    end
+
+    trait :delivered do
+      status { 'delivered' }
+    end
+
+    factory :delivering_cargo, traits: [:delivering]
+    factory :delivered_cargo, traits: [:delivered]
   end
 end

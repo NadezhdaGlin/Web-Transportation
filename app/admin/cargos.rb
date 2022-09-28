@@ -17,7 +17,12 @@ ActiveAdmin.register Cargo do
       f.input :height
       f.input :origins
       f.input :destinations
-      f.input :status, as: :select, collection: @resource.aasm.states(permitted: true).map { |state| state.name.to_s }, include_blank: false
+      f.input :status,
+        as: :select, 
+        collection: resource.aasm.states(permitted: true)
+          .map { |state| state.name.to_s }
+          .append(resource.aasm.current_state.to_s), 
+        include_blank: false
     end
     f.actions
   end
@@ -29,10 +34,10 @@ ActiveAdmin.register Cargo do
   
     def update
       @cargo = Cargo.find(permitted_params[:id])
-      @cargo.assign_attributes(cargo_params)
+      @cargo.assign_attributes(permitted_params[:cargo])
 
       if required_to_recalculate?(@cargo) 
-        updated_params = Package::Builder.cargo_information(cargo_params)
+        updated_params = Package::Builder.cargo_information(permitted_params[:cargo])
         @cargo.update(updated_params)
         redirect_to admin_cargo_path
       else
@@ -42,13 +47,6 @@ ActiveAdmin.register Cargo do
     end
 
     private
-
-    def cargo_params
-      params.require(:cargo).permit(:name, :surname, :middle_name, :phone, :email, :weight, :length, :width,
-                                    :height,
-                                    :origins,
-                                    :destinations)
-    end
 
     def required_to_recalculate?(cargo)
       cargo.weight_changed? || cargo.length_changed? || cargo.width_changed? || 
