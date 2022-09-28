@@ -6,10 +6,8 @@ module Cargos
            :origins, :destinations
     float :weight
     integer :length, :width, :height
-    object :user, :cargo
-    validates :cargo,
-              :user,
-              presence: true
+    object  :cargo
+    validates :cargo, presence: true
     validates :phone, format: { with: /(^\+?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$)/ }
 
     def execute
