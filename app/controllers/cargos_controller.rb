@@ -8,7 +8,7 @@ class CargosController < ApplicationController
       @cargos = Cargo.where(user_id: current_user.organization.users.ids).page(params[:page])
       @users = current_user.organization.users
     else
-      @cargos = Cargo.where(user_id: user_id).page(params[:page])
+      @cargos = Cargo.where(user_id: current_user.id).page(params[:page])
     end
 
     @cargos = @cargos.rewhere(user_id: params[:operator_id_filter]) if params[:operator_id_filter].present?
