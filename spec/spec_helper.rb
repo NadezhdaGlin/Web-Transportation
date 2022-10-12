@@ -17,6 +17,7 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'aasm/rspec'
 require 'vcr'
+require 'pundit/rspec'
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/vcr'

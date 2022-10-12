@@ -14,6 +14,13 @@
   </tr>
 </strong>
 
+<% if current_user.is_organization_admin? %>
+  <%= form_for(cargos_path, method: 'get') do %>
+    <%= select_tag('operator_id_filter', options_from_collection_for_select(@users, :id, :email))%>   
+    <%= submit_tag("Search")%>
+  <%end%>
+<%end%>
+
 <% @cargos.each do |cargo|%>
   <div>
     <h2>
@@ -24,10 +31,12 @@
 
 <%= paginate @cargos %>
 
-<%if current_user.present?%>
+<%if current_user.organization.present?%>
   <div>
     <h4>
       <%= link_to "CREATE ORDER", new_cargo_path %>
     </h4>
   </div>
+<%else%>
+  <h4> <strong> You don't have a role to create cargos yet </strong> </h4>
 <%end%>
