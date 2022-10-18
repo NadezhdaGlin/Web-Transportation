@@ -4,6 +4,14 @@
   </div>
 <%end%>
 
+<% if current_user.is_organization_admin? %>
+  <div>
+    <h3>
+      <%= link_to "Personal Area", current_user%>
+    </h3>
+  </div>
+<%end%>
+
 <h1>ORDERS</h1>
 
 <strong>
