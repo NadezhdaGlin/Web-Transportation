@@ -16,7 +16,7 @@ module Cargos
         end
         { text: 'Count of packages by: ', data: "#{result.join(', ')}" }
       else
-        { text: 'Count of packages by users', data: input }
+        { text: 'Count of packages by users', data: input.to_s }
       end
     end
   end
