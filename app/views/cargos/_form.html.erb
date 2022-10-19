@@ -54,9 +54,15 @@
     <%= form.text_field :destinations%> 
   </div>
 
-  <h3>
-    <%= form.submit "CREATE" %>
-  </h3>
+  <% if controller.action_name == "new"%>
+    <h3>
+      <%= form.submit "CREATE" %>
+    </h3>
+  <% else %>
+    <h3>
+      <%= form.submit "UPDATE" %>
+    </h3>
+  <%end%>
 <%end%>
 
 <div>
