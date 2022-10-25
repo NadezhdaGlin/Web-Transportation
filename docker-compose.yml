@@ -1,26 +1,44 @@
 version: "3.8"
 
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile  
+  postgresql:
+    image: postgres
+    volumes:
+      - "postgres:/var/lib/posgresql/data"
+    environment:
+      - POSTGRES_USER: postgres
+      - POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis
+    volumes:
+      - redis:/data
+    command: redis-server
+    ports: 
+      - "6379:6379"
+
+  sidekiq:
+    image: sidekiq
+    volumes:
+      - .:/app
+    depends_on:
+    - postgresql
+    - redis
+    command: bundle exec sidekiq
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - "3000:3000"
     depends_on:
-      - db
-    environment:
-      RAILS_ENV: development
-
-    db:
-      image: postgres
-      environment:
-        - POSTGRES_USER: postgres
-        - POSTGRES_PASSWORD: password
-      ports:
-        - "5432:5432"
-      volumes:
-        - db_data:/var/lib/postgresql/data
+      - postgresql
+      - redis
 
 volumes:
-  db:
+  postgresql:
+  redis:

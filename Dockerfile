@@ -2,9 +2,9 @@ FROM ruby:3.0.3
 
 RUN apt-get update && apt-get install -y postgresql-client
 
-WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+WORKDIR /app
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 
 RUN bundle check || bundle install
 
