@@ -1,0 +1,6 @@
+:schedule:
+  queue_for_changing_cargo_status:
+    cron: '0 0 16 * * *'
+    class: StatesJob
+    enabled: true
+    
